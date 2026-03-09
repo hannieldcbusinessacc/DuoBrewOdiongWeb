@@ -137,14 +137,27 @@ color:#4a2d18;
 }
 
 /* CARD GRID */
-
-
 .subject-card-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(160px,3fr));
-gap:20px;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
 margin-top:40px;
 }
+
+/* Tablet */
+@media (max-width:900px){
+.subject-card-grid{
+grid-template-columns:repeat(3,1fr);
+}
+}
+
+/* Phone */
+@media (max-width:600px){
+.subject-card-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
 
 
 /* MENU CARD */
@@ -552,7 +565,7 @@ Relax with friends, enjoy premium drinks, and play pool in a cozy environment.
 </div>
 
 <!-- HOT DRINKS -->
-<center><h2>Hot Drinks/h2></center>
+<center><h2>Hot Drinks</h2></center>
 <div class="subject-card">
 <h3>Hot Coffee</h3>
 <p>Cafe Macchiato / Mochaccino</p>
