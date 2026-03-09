@@ -158,6 +158,30 @@ text-align:center;
 cursor:pointer;
 }
 
+.subject-card{
+padding:18px;
+}
+.subject-card:hover{
+transform:translateY(-6px);
+}
+.subject-card h3,
+.subject-card p{
+transition:all 0.2s ease;
+}
+
+.subject-card h3:hover{
+background:#ffd700;
+color:black;
+padding:3px 6px;
+border-radius:5px;
+}
+
+.subject-card p:hover{
+background:rgba(255,255,255,0.25);
+padding:3px 6px;
+border-radius:5px;
+}
+
 .subject-card:hover{
 transform:translateY(-6px) scale(1.02);
 background:#a56f47;
@@ -215,10 +239,6 @@ section{
 padding:70px 15px;
 }
 
-.subject-card{
-padding:18px;
-}
-
 }
 
 .map-container{
@@ -254,6 +274,8 @@ max-width:180px;
 margin-top:10px;
 border-radius:8px;
 }
+
+
 
 </style>
 </head>
