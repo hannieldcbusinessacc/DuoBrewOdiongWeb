@@ -1,0 +1,364 @@
+<html>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duo Brew Cafe & Billiards</title>
+
+<style>
+
+/* GLOBAL */
+
+*{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:"Roboto",Arial,sans-serif;
+background:#f7efe7;
+}
+
+h1{
+font-family:"Oswald",sans-serif;
+letter-spacing:1px;
+text-transform:uppercase;
+font-size:clamp(28px,4vw,46px);
+}
+
+h2{
+font-family:"Oswald",sans-serif;
+font-size:clamp(26px,3vw,36px);
+margin-bottom:20px;
+}
+
+h3{
+font-family:"Oswald",sans-serif;
+font-size:clamp(16px,2vw,20px);
+}
+
+p{
+font-size:clamp(14px,1.8vw,16px);
+line-height:1.6;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:65px;
+background:#8b5e3c;
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:1000;
+}
+
+.nav-links{
+display:flex;
+gap:clamp(15px,4vw,50px);
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.nav-links a{
+font-family:"Oswald",sans-serif;
+color:white;
+text-decoration:none;
+font-size:clamp(14px,2vw,18px);
+letter-spacing:1px;
+transition:.2s;
+}
+
+.nav-links a:hover{
+color:#ffd7a3;
+}
+
+/* HERO */
+
+#home{
+min-height:100vh;
+padding:110px 20px 60px 20px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+background:
+linear-gradient(rgba(139,94,60,0.85),rgba(139,94,60,0.85)),
+url("/mnt/data/f086ca98-b06a-42bc-9525-cd6876006335.png");
+
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:900px;
+color:white;
+}
+
+/* INFO BOX */
+
+.informationbox{
+background:rgba(255,255,255,0.1);
+border-radius:15px;
+padding:clamp(20px,4vw,35px);
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+color:white;
+backdrop-filter:blur(6px);
+}
+
+/* SECTIONS */
+
+section{
+padding:80px 20px;
+}
+
+.content{
+max-width:1100px;
+margin:auto;
+text-align:center;
+}
+
+/* MENU SECTION */
+
+#menu{
+background:#e9d7c3;
+color:#4a2d18;
+}
+
+/* CARD GRID */
+
+.subject-card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+/* MENU CARD */
+
+.subject-card{
+background:#8b5e3c;
+color:white;
+border-radius:15px;
+padding:25px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+transition:.25s;
+text-align:center;
+cursor:pointer;
+}
+
+.subject-card:hover{
+transform:translateY(-6px) scale(1.02);
+background:#a56f47;
+}
+
+.price{
+font-family:"Oswald";
+font-size:22px;
+color:#ffd7a3;
+margin-top:5px;
+}
+
+/* BILLIARDS SECTION */
+
+#billiards{
+background:
+linear-gradient(rgba(139,94,60,0.9),rgba(139,94,60,0.9)),
+url("https://images.unsplash.com/photo-1565026057447-bc90b3dceb87");
+
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+#billiards ol{
+text-align:left;
+font-size:clamp(16px,2vw,20px);
+line-height:1.7;
+padding-left:25px;
+margin:0;
+font-family:"Oswald",sans-serif;
+}
+
+/* CONTACT */
+
+#contact{
+background:#e9d7c3;
+color:#4a2d18;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.navbar{
+height:auto;
+padding:10px;
+}
+
+.nav-links{
+gap:12px;
+}
+
+section{
+padding:70px 15px;
+}
+
+.subject-card{
+padding:18px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#menu">Menu</a>
+<a href="#billiards">Billiards</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+
+<!-- HOME -->
+
+<section id="home">
+
+<div class="hero-content">
+
+<div class="informationbox">
+
+<h1>Duo Brew Cafe & Billiards</h1>
+
+<p>
+Milk Tea, Coffee, and Chill Billiards.
+Relax with friends, enjoy premium drinks, and play pool in a cozy environment.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MENU -->
+
+<section id="menu">
+
+<center><h2>Our Menu</h2></center>
+
+<div class="subject-card-grid">
+
+<div class="subject-card">
+<h3>Classic Milk Tea</h3>
+<p>Rich black tea with creamy milk.</p>
+<div class="price">₱20</div>
+</div>
+
+<div class="subject-card">
+<h3>Brown Sugar Boba</h3>
+<p>Signature caramelized brown sugar pearls.</p>
+<div class="price">₱38</div>
+</div>
+
+<div class="subject-card">
+<h3>Matcha Latte</h3>
+<p>Premium Japanese matcha with milk.</p>
+<div class="price">₱38</div>
+</div>
+
+<div class="subject-card">
+<h3>Taro Milk Tea</h3>
+<p>Smooth and sweet taro flavored drink.</p>
+<div class="price">₱38</div>
+</div>
+
+<div class="subject-card">
+<h3>Iced Coffee</h3>
+<p>Cold brewed coffee served over ice.</p>
+<div class="price">₱20</div>
+</div>
+
+<div class="subject-card">
+<h3>Caramel Latte</h3>
+<p>Espresso blended with caramel sweetness.</p>
+<div class="price">₱38</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- BILLIARDS -->
+
+<section id="billiards">
+
+<div class="content">
+
+<div class="informationbox">
+
+<h2>Billiards & Cafe Experience</h2>
+
+<ol>
+<li>Professional billiard tables available</li>
+<li>Relaxed café environment</li>
+<li>Affordable drinks while you play</li>
+<li>Perfect for friends, study, and hangouts</li>
+</ol>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="content">
+
+<h2>Visit Us</h2>
+
+<div class="subject-card-grid">
+
+<div class="subject-card">
+<h3>Location</h3>
+<p>Visit Duo Brew Cafe & Billiards for drinks and games.</p>
+</div>
+
+<div class="subject-card">
+<h3>Facebook</h3>
+<p>Follow us for promotions and events.</p>
+</div>
+
+<div class="subject-card">
+<h3>Opening Hours</h3>
+<p>10:00 AM - 12:00 Midnight</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
