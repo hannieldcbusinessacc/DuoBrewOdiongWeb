@@ -67,7 +67,22 @@ align-items:center;
 box-shadow:0 4px 10px rgba(0,0,0,0.3);
 z-index:1000;
 }
+.nav-logo{
+display:flex;
+align-items:center;
+gap:10px;
+color:white;
+font-family:"Oswald";
+font-size:20px;
+}
 
+.logo{
+width:40px;
+height:40px;
+border-radius:50%;
+object-fit:cover;
+}
+ 
 .nav-links{
 display:flex;
 gap:clamp(15px,4vw,50px);
@@ -189,6 +204,13 @@ border-radius:5px;
 transform:translateY(-6px) scale(1.02);
 background:#a56f47;
 }
+#contact .subject-card{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.25);
+color:white;
+}
+ 
 
 .price{
 font-family:"Oswald";
@@ -269,8 +291,13 @@ font-family:"Oswald",sans-serif;
 /* CONTACT */
 
 #contact{
-background:#e9d7c3;
-color:#4a2d18;
+background:
+linear-gradient(rgba(139,94,60,0.85),rgba(139,94,60,0.85)),
+url("https://img.freepik.com/free-photo/coffee-background_23-2148905732.jpg");
+
+background-size:cover;
+background-position:center;
+color:white;
 }
 
 /* MOBILE */
@@ -355,15 +382,22 @@ border-radius:3px;
 <body>
 
 <!-- NAVBAR -->
-
 <div class="navbar">
+
+<div class="nav-logo">
+<img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/641669657_122103592767263511_478448340554167767_n.jpg" class="logo">
+<span>Duo Brew</span>
+</div>
+
 <div class="nav-links">
 <a href="#home">Home</a>
 <a href="#menu">Menu</a>
 <a href="#billiards">Billiards</a>
 <a href="#contact">Contact</a>
 </div>
+
 </div>
+
 
 <!-- HOME -->
 
@@ -466,6 +500,89 @@ font-weight:bold;
 color:#8b5e3c;
 }
 
+ .billiard-balls{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:1;
+}
+
+.ball{
+position:absolute;
+width:60px;
+height:60px;
+border-radius:50%;
+background:white;
+opacity:0.08;
+animation:floatBalls 20s linear infinite;
+}
+
+.ball:nth-child(1){
+left:10%;
+top:80%;
+animation-duration:18s;
+}
+
+.ball:nth-child(2){
+left:60%;
+top:90%;
+animation-duration:22s;
+}
+
+.ball:nth-child(3){
+left:80%;
+top:70%;
+animation-duration:25s;
+}
+
+@keyframes floatBalls{
+0%{
+transform:translateY(0);
+}
+100%{
+transform:translateY(-120vh);
+}
+}
+
+ .floating-drinks{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+}
+
+.floating-drinks div{
+position:absolute;
+font-size:40px;
+opacity:0.15;
+animation:floatDrink 18s linear infinite;
+}
+
+.floating-drinks div:nth-child(1){
+left:15%;
+top:80%;
+}
+
+.floating-drinks div:nth-child(2){
+left:70%;
+top:90%;
+}
+
+.floating-drinks div:nth-child(3){
+left:40%;
+top:85%;
+}
+
+@keyframes floatDrink{
+0%{transform:translateY(0)}
+100%{transform:translateY(-120vh)}
+}
+
 </style>
 
 
@@ -474,7 +591,11 @@ color:#8b5e3c;
 
 <!-- MILK TEA -->
 <div class="menu-category">
-
+<div class="floating-drinks">
+<div>☕</div>
+<div>🧋</div>
+<div>🥤</div>
+</div>
 <div class="menu-title">Milk Tea</div>
 
 <div class="menu-grid">
@@ -550,7 +671,12 @@ color:#8b5e3c;
 <!-- BILLIARDS -->
 
 <section id="billiards">
-
+<div class="billiard-balls">
+<div class="ball"></div>
+<div class="ball"></div>
+<div class="ball"></div>
+</div>
+ 
 <div class="content">
 
 <div class="informationbox">
