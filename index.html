@@ -199,14 +199,62 @@ margin-top:5px;
 
 /* BILLIARDS SECTION */
 
+/* BILLIARDS SECTION */
+
 #billiards{
+position:relative;
+overflow:hidden;
+
 background:
-linear-gradient(rgba(139,94,60,0.2),rgba(139,94,60,0.2)),
-url("https://img.freepik.com/free-photo/brown-gradient-background_53876-104923.jpg?semt=ais_rp_50_assets&w=740&q=80");
+linear-gradient(rgba(139,94,60,0.85),rgba(139,94,60,0.85)),
+url("https://img.freepik.com/free-photo/billiard-table-with-balls_23-2148707062.jpg");
 
 background-size:cover;
 background-position:center;
+
 color:white;
+}
+
+/* animated light sweep */
+#billiards::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+
+background:linear-gradient(
+120deg,
+transparent 30%,
+rgba(255,255,255,0.08),
+transparent 70%
+);
+
+animation:tableGlow 8s linear infinite;
+}
+
+@keyframes tableGlow{
+0%{
+transform:translateX(-50%) translateY(-50%) rotate(0deg);
+}
+100%{
+transform:translateX(50%) translateY(50%) rotate(360deg);
+}
+}
+
+#billiards .content{
+position:relative;
+z-index:2;
+}
+
+#billiards ol{
+text-align:left;
+font-size:clamp(16px,2vw,20px);
+line-height:1.7;
+padding-left:25px;
+margin:0;
+font-family:"Oswald",sans-serif;
 }
 
 #billiards ol{
@@ -498,6 +546,7 @@ color:#8b5e3c;
 
 </div>
 </div>
+ </section>
 <!-- BILLIARDS -->
 
 <section id="billiards">
