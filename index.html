@@ -25,6 +25,417 @@
 
 /* NAVBAR */
 
+/* ================= GLOBAL ================= */
+
+*{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:"Roboto", Arial, sans-serif;
+background:#f7efe7;
+}
+
+h1{
+font-family:"Oswald", sans-serif;
+letter-spacing:1px;
+text-transform:uppercase;
+font-size:clamp(28px,4vw,46px);
+}
+
+h2{
+font-family:"Oswald", sans-serif;
+font-size:clamp(26px,3vw,36px);
+margin-bottom:20px;
+}
+
+h3{
+font-family:"Oswald", sans-serif;
+font-size:clamp(16px,2vw,20px);
+}
+
+p{
+font-size:clamp(14px,1.8vw,16px);
+line-height:1.6;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:65px;
+background:#8b5e3c;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 40px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:1000;
+}
+
+.nav-logo{
+display:flex;
+align-items:center;
+gap:10px;
+color:white;
+text-decoration:none;
+font-family:"Oswald";
+font-size:20px;
+}
+
+.logo{
+width:40px;
+height:40px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.nav-links{
+display:flex;
+gap:clamp(15px,4vw,50px);
+flex-wrap:wrap;
+justify-content:center;
+margin-left:auto;
+}
+
+.nav-links a{
+font-family:"Oswald",sans-serif;
+color:white;
+text-decoration:none;
+font-size:clamp(14px,2vw,18px);
+letter-spacing:1px;
+transition:.2s;
+}
+
+.nav-links a:hover{
+color:#ffd7a3;
+}
+
+
+/* ================= HERO ================= */
+
+#home{
+min-height:100vh;
+padding:110px 20px 60px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+background:
+linear-gradient(rgba(139,94,60,0.85),rgba(139,94,60,0.85)),
+url("https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/629682645_26764344916488671_1020831820513382111_n.jpg");
+
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:900px;
+color:white;
+}
+
+
+/* ================= INFORMATION BOX ================= */
+
+.informationbox{
+background:rgba(255,255,255,0.1);
+border-radius:15px;
+padding:clamp(20px,4vw,35px);
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+color:white;
+backdrop-filter:blur(6px);
+}
+
+
+/* ================= GENERAL SECTIONS ================= */
+
+section{
+padding:80px 20px;
+}
+
+.content{
+max-width:1100px;
+margin:auto;
+text-align:center;
+}
+
+
+/* ================= MENU SECTION ================= */
+
+#menu{
+background:#e9d7c3;
+color:#4a2d18;
+}
+
+.menu-category{
+margin-top:60px;
+}
+
+.menu-title{
+font-family:"Oswald",sans-serif;
+font-size:clamp(24px,3vw,34px);
+text-align:center;
+color:#4a2d18;
+margin-bottom:25px;
+position:relative;
+}
+
+.menu-title::after{
+content:"";
+display:block;
+width:60px;
+height:3px;
+background:#8b5e3c;
+margin:10px auto 0;
+border-radius:3px;
+}
+
+
+/* ================= MENU GRID ================= */
+
+.subject-card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.subject-card{
+background:#8b5e3c;
+color:white;
+border-radius:15px;
+padding:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+transition:.25s;
+text-align:center;
+cursor:pointer;
+}
+
+.subject-card:hover{
+transform:translateY(-6px) scale(1.02);
+background:#a56f47;
+}
+
+.subject-card h3,
+.subject-card p{
+transition:all 0.2s ease;
+}
+
+.subject-card h3:hover{
+background:#ffd700;
+color:black;
+padding:3px 6px;
+border-radius:5px;
+}
+
+.subject-card p:hover{
+background:rgba(255,255,255,0.25);
+padding:3px 6px;
+border-radius:5px;
+}
+
+.price{
+font-family:"Oswald";
+font-size:22px;
+color:#ffd7a3;
+margin-top:5px;
+}
+
+
+/* ================= BILLIARDS SECTION ================= */
+
+#billiards{
+position:relative;
+overflow:hidden;
+
+background:
+linear-gradient(rgba(139,94,60,0.85),rgba(139,94,60,0.85)),
+url("https://scontent.fmnl17-3.fna.fbcdn.net/v/t39.30808-6/643896657_122104743591263511_6792776027045344425_n.jpg");
+
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+#billiards::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+
+background:linear-gradient(
+120deg,
+transparent 30%,
+rgba(255,255,255,0.08),
+transparent 70%
+);
+
+animation:tableGlow 8s linear infinite;
+}
+
+@keyframes tableGlow{
+0%{
+transform:translateX(-50%) translateY(-50%) rotate(0deg);
+}
+100%{
+transform:translateX(50%) translateY(50%) rotate(360deg);
+}
+}
+
+#billiards .content{
+position:relative;
+z-index:2;
+}
+
+#billiards ol{
+text-align:left;
+font-size:clamp(16px,2vw,20px);
+line-height:1.7;
+padding-left:25px;
+margin:0;
+font-family:"Oswald",sans-serif;
+}
+
+
+/* ================= CONTACT SECTION ================= */
+
+#contact{
+background:
+linear-gradient(rgba(139,94,60,0.85),rgba(139,94,60,0.85)),
+url("https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/642727385_122104671933263511_8628118782755012068_n.jpg");
+
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+#contact .subject-card{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.25);
+color:white;
+}
+
+
+/* ================= MAP ================= */
+
+.map-container{
+margin-top:10px;
+width:100%;
+height:250px;
+border-radius:10px;
+overflow:hidden;
+}
+
+.map-container iframe{
+width:100%;
+height:100%;
+border:0;
+}
+
+
+/* ================= SOCIAL ================= */
+
+.social-icon{
+width:60px;
+margin-top:10px;
+filter:invert(1);
+opacity:0.9;
+transition:0.2s;
+}
+
+.social-icon:hover{
+transform:scale(1.1);
+opacity:1;
+}
+
+
+/* ================= OPENING HOURS ================= */
+
+.hours-image{
+width:100%;
+max-width:180px;
+margin-top:10px;
+border-radius:8px;
+}
+
+
+/* ================= DROPDOWN MENU ================= */
+
+.dropdown{
+position:relative;
+display:flex;
+align-items:center;
+}
+
+.dropdown-content{
+position:absolute;
+top:40px;
+left:0;
+background:white;
+border-radius:8px;
+box-shadow:0 6px 18px rgba(0,0,0,0.25);
+border-top:4px solid #8b5e3c;
+min-width:200px;
+
+opacity:0;
+visibility:hidden;
+transform:translateY(10px);
+transition:0.25s ease;
+z-index:1000;
+}
+
+.dropdown-content a{
+display:block;
+padding:10px 15px;
+color:#4a2d18;
+text-decoration:none;
+font-family:"Oswald";
+font-size:14px;
+transition:0.2s;
+}
+
+.dropdown-content a:hover{
+background:#f1e4d6;
+}
+
+.dropdown:hover .dropdown-content{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+.navbar{
+height:auto;
+padding:10px;
+}
+
+.nav-links{
+gap:12px;
+}
+
+section{
+padding:70px 15px;
+}
+}
+ 
 .navbar{
 position:fixed;
 top:0;
