@@ -81,7 +81,54 @@ padding:0 40px;
 box-shadow:0 4px 10px rgba(0,0,0,0.3);
 z-index:1000;
 }
+/* HAMBURGER BUTTON */
 
+.menu-toggle{
+display:none;
+font-size:26px;
+color:white;
+cursor:pointer;
+}
+
+/* MOBILE NAV */
+
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+position:absolute;
+top:65px;
+right:0;
+background:#8b5e3c;
+flex-direction:column;
+width:200px;
+padding:20px;
+gap:15px;
+
+opacity:0;
+visibility:hidden;
+transform:translateY(-10px);
+transition:0.25s;
+}
+
+.nav-links.show{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+}
+
+.dropdown-content{
+position:static;
+box-shadow:none;
+border:none;
+background:#a56f47;
+margin-top:5px;
+}
+
+}
 .nav-logo{
 display:flex;
 align-items:center;
@@ -531,7 +578,11 @@ transform:translateY(0);
 </style>
 
 </head>
-
+<script>
+function toggleMenu(){
+document.querySelector(".nav-links").classList.toggle("show");
+}
+</script>
 <body>
 
 <!-- NAVBAR -->
@@ -540,34 +591,23 @@ transform:translateY(0);
 <div class="navbar">
 
 <a href="#home" class="nav-logo">
-<img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/641669657_122103592767263511_478448340554167767_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeHeDnBBMq9-wItqAHvTW7zEjKUa8jU0P4WMpRryNTQ_hTpvZp21eRFnVcrSVApeG6OcBEe7WvcMPCy54qDP3GwE&_nc_ohc=4nsQ7m4jzpcQ7kNvwHl0ubD&_nc_oc=AdmPWNodBmA8E2HXoX4oqQ2xBwWNiZ3_vCpUXZJlyV5VBEV7NflF9kLurFqAi2Kwbfg&_nc_zt=23&_nc_ht=scontent.fmnl17-2.fna&_nc_gid=0ej5NizLztOhXi69jTtgQQ&_nc_ss=8&oh=00_Afy5TexxgTMSWNVvlKMsRt9z0xBw6oGSLLFZrgfRZ5nGUQ&oe=69B6FDEF" class="logo">
-<span>Duo Brew Odiong</span>
+<img src="yourlogo.jpg" class="logo">
+<span>Duo Brew</span>
 </a>
 
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
 <div class="nav-links">
-
 <a href="#home">Home</a>
-
 <div class="dropdown">
 <a href="#menu">Menu ▾</a>
-
 <div class="dropdown-content">
 <a href="#milk-tea">Milk Tea</a>
 <a href="#iced-coffee">Iced Coffee</a>
-<a href="#coffee-frappe">Coffee Frappe</a>
-<a href="#iced-latte">Iced Latte</a>
-<a href="#soda">Soda</a>
-<a href="#frappe">Frappe</a>
-<a href="#fruit-tea">Fruit Tea</a>
-<a href="#yogurt">Yogurt</a>
-<a href="#hot-drinks">Hot Drinks</a>
 </div>
-
 </div>
-
 <a href="#billiards">Billiards</a>
 <a href="#contact">Contact</a>
-
 </div>
 
 </div>
