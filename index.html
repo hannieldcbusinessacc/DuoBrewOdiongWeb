@@ -378,6 +378,45 @@ margin:10px auto 0;
 border-radius:3px;
 }
 
+ /* DROPDOWN MENU */
+
+.dropdown{
+position:relative;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+top:35px;
+left:0;
+background:white;
+border-radius:8px;
+box-shadow:0 6px 18px rgba(0,0,0,0.25);
+min-width:200px;
+z-index:1000;
+overflow:hidden;
+}
+
+.dropdown-content a{
+display:block;
+padding:10px 15px;
+color:#4a2d18;
+text-decoration:none;
+font-family:"Oswald";
+font-size:14px;
+transition:0.2s;
+}
+
+.dropdown-content a:hover{
+background:#f1e4d6;
+}
+
+/* show dropdown when hovering */
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+ 
 </style>
 </head>
 
@@ -393,11 +432,28 @@ border-radius:3px;
 
 <div class="nav-links">
 <a href="#home">Home</a>
-<a href="#menu">Menu</a>
+
+<div class="dropdown">
+<a href="#menu">Menu ▾</a>
+
+<div class="dropdown-content">
+
+<a href="#milk-tea">Milk Tea</a>
+<a href="#iced-coffee">Iced Coffee</a>
+<a href="#coffee-frappe">Coffee Frappe</a>
+<a href="#iced-latte">Iced Latte</a>
+<a href="#soda">Soda</a>
+<a href="#frappe">Frappe</a>
+<a href="#fruit-tea">Fruit Tea</a>
+<a href="#yogurt">Yogurt</a>
+<a href="#hot-drinks">Hot Drinks</a>
+
+</div>
+</div>
+
 <a href="#billiards">Billiards</a>
 <a href="#contact">Contact</a>
 </div>
-
 </div>
 
 
